@@ -1,0 +1,15 @@
+<p>
+  <strong>Character:</strong>
+  <%= character.name %>
+</p>
+
+<p>
+  <strong>Description</strong>
+  <%= character.description %>
+</p>
+
+<p>
+  <%= link_to 'Remove Character', [character.game, character],
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+</p>

@@ -1,0 +1,17 @@
+<h1><%= @game.title %></h1>
+
+<p><%= @game.body %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_game_path(@game) %></li>
+  <li><%= link_to "Destroy", game_path(@game),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
+
+<h2>Characters</h2>
+<%= render @game.characters %>
+
+
+<h2>Add Characters:</h2>
+<%= render 'characters/form' %>
